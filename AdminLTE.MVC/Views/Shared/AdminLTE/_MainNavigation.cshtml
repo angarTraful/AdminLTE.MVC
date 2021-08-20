@@ -1,0 +1,68 @@
+﻿@using static AdminLTE.MVC.Helpers.NavigationIndicatorHelper;
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="~/Home" class="brand-link">
+        <img src="~/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+    <div class="sidebar">
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+            <img src="~/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+            <a href="#" class="d-block">Hola @User.Identity.Name </a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+            <a href="#" class="d-block">Hola Visitante</a>
+        </div>
+    </div>
+}
+
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item ">
+                    <a asp-controller="Home" asp-action="Index" class="nav-link @Url.MakeActiveClass("home","index")">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Tablero de CONTROL
+                        </p>
+                    </a>
+                </li>
+                
+                <li><p></p></li>
+                
+                @if (User.Identity.IsAuthenticated)
+                {
+                <partial name="AdminLTE/Botonera/_BtnRecepcion" />
+                <partial name="AdminLTE/Botonera/_BtnAlmacenaje" />
+                <partial name="AdminLTE/Botonera/_BtnPedidos" />
+                <partial name="AdminLTE/Botonera/_BtnDespachos" />
+                <partial name="AdminLTE/Botonera/_BtnTransporte" />
+                <partial name="AdminLTE/Botonera/_BtnAdministrativo" />
+                <partial name="AdminLTE/Botonera/_BtnProduccion" />
+                <partial name="AdminLTE/Botonera/_BtnRetail" />
+                
+                <li><p></p></li>
+                
+            <li class="nav-item ">
+                <a asp-controller="Home" asp-action="Privacy" class="nav-link @Url.MakeActiveClass("home", "privacy")">
+                    <i class="nav-icon fas fa-cog"></i>
+                    <p>
+                        Configuraciones
+                    </p>
+                </a>
+            </li>
+                
+                }
+            </ul>
+        </nav>
+    </div>
+</aside>

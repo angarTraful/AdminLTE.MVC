@@ -1,0 +1,54 @@
+﻿@using static AdminLTE.MVC.Helpers.NavigationIndicatorHelper;
+
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-warehouse"></i>
+        <p>
+             ALMACEN
+            <i class="fas fa-angle-left right"></i>
+            <span class="badge badge-primary right">WMS</span>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a asp-controller="Home" asp-action="Index" class="nav-link @Url.MakeActiveClass("home","index")">
+                <i class="nav-icon fas fa-cubes"></i>
+                <p>
+                    Inventarios
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/icons.html" class="nav-link">
+                <i class="fas fa-grip-vertical nav-icon"></i>
+                <p>Slotting</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/buttons.html" class="nav-link">
+                <i class="fas fa-vector-square nav-icon"></i>
+                <p>Movimientos</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/sliders.html" class="nav-link">
+                <i class="fas fa-cogs nav-icon"></i>
+                <p>Procesos</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/modals.html" class="nav-link">
+                <i class="fas fa-bug nav-icon"></i>
+                <p>Cuarentena</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/modals.html" class="nav-link">
+                <i class="fas fa-tools nav-icon"></i>
+                <p> ABMs y Reglas </p>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+
+    </ul>
+</li>

@@ -1,0 +1,50 @@
+﻿@using static AdminLTE.MVC.Helpers.NavigationIndicatorHelper;
+
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-dolly-flatbed"></i>
+        <p>
+             PEDIDOS 
+            <i class="fas fa-angle-left right"></i>
+            <span class="badge badge-warning right">PL</span>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a href="UI/icons.html" class="nav-link">
+                <i class="fas fa-dolly nav-icon"></i>
+                <p>Preparacion de pedidos</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="Home" asp-action="Index" class="nav-link @Url.MakeActiveClass("home","index")">
+                <i class="nav-icon fas fa-layer-group"></i>
+                <p>
+                    Ordenes de Pedidos
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/buttons.html" class="nav-link">
+                <i class="fas fa-tag nav-icon"></i>
+                <p>Tags / Etiquetas</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/sliders.html" class="nav-link">
+                <i class="fas fa-check-double nav-icon"></i>
+                <p>Autorizaciones</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="UI/modals.html" class="nav-link">
+                <i class="fas fa-concierge-bell nav-icon"></i>
+                <p>
+                    Avisos y alertas
+                </p>
+            </a>
+        </li>
+        <li>&nbsp;</li>
+
+    </ul>
+</li>
